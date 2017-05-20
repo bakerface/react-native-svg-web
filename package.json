@@ -1,0 +1,47 @@
+{
+  "name": "react-native-svg-web",
+  "version": "1.0.0",
+  "description": "A web replacement for react-native-svg",
+  "main": "index.js",
+  "author": "Chris Baker <mail.chris.baker@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/bakerface/react-native-svg-web#readme",
+  "keywords": [
+    "react",
+    "native",
+    "svg",
+    "web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakerface/react-native-svg-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bakerface/react-native-svg-web/issues"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "xo": {
+    "space": true,
+    "env": [
+      "browser"
+    ],
+    "rules": {
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "react": ">=15.4.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
+  "devDependencies": {
+    "react": "^15.5.4",
+    "xo": "^0.18.2"
+  }
+}
