@@ -23,8 +23,8 @@
 
 'use strict';
 
-import React from 'react';
-import PropTypes from 'prop-types';
+const React = require('react');
+const PropTypes = require('prop-types');
 
 function createElement(name, type) {
   function CreateElement(props) {
@@ -44,25 +44,25 @@ function createElement(name, type) {
   return CreateElement;
 }
 
-export const Circle = createElement('Circle', 'circle');
-export const ClipPath = createElement('ClipPath', 'clipPath');
-export const Defs = createElement('Defs', 'defs');
-export const Ellipse = createElement('Ellipse', 'ellipse');
-export const G = createElement('G', 'g');
-export const Image = createElement('Image', 'image');
-export const Line = createElement('Line', 'line');
-export const LinearGradient = createElement('LinearGradient', 'linearGradient');
-export const Path = createElement('Path', 'path');
-export const Polygon = createElement('Polygon', 'polygon');
-export const Polyline = createElement('Polyline', 'polyline');
-export const RadialGradient = createElement('RadialGradient', 'radialGradient');
-export const Rect = createElement('Rect', 'rect');
-export const Stop = createElement('Stop', 'stop');
-export const Svg = createElement('Svg', 'svg');
-export const Symbol = createElement('Symbol', 'symbol');
-export const Text = createElement('Text', 'text');
-export const TextPath = createElement('TextPath', 'textPath');
-export const TSpan = createElement('TSpan', 'tspan');
-export const Use = createElement('Use', 'use');
+const Svg = module.exports = createElement('Svg', 'svg');
 
-export default Svg;
+Svg.Circle = createElement('Circle', 'circle');
+Svg.ClipPath = createElement('ClipPath', 'clipPath');
+Svg.Defs = createElement('Defs', 'defs');
+Svg.Ellipse = createElement('Ellipse', 'ellipse');
+Svg.G = createElement('G', 'g');
+Svg.Image = createElement('Image', 'image');
+Svg.Line = createElement('Line', 'line');
+Svg.LinearGradient = createElement('LinearGradient', 'linearGradient');
+Svg.Path = createElement('Path', 'path');
+Svg.Polygon = createElement('Polygon', 'polygon');
+Svg.Polyline = createElement('Polyline', 'polyline');
+Svg.RadialGradient = createElement('RadialGradient', 'radialGradient');
+Svg.Rect = createElement('Rect', 'rect');
+Svg.Stop = createElement('Stop', 'stop');
+Svg.Svg = createElement('Svg', 'svg');
+Svg.Symbol = createElement('Symbol', 'symbol');
+Svg.Text = createElement('Text', 'text');
+Svg.TextPath = createElement('TextPath', 'textPath');
+Svg.TSpan = createElement('TSpan', 'tspan');
+Svg.Use = createElement('Use', 'use');
