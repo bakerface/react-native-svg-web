@@ -23,46 +23,69 @@
 
 'use strict';
 
-const React = require('react');
-const PropTypes = require('prop-types');
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var React = require('react');
+var PropTypes = require('prop-types');
 
 function createElement(name, type) {
-  function CreateElement(props) {
-    return React.createElement(type, props, props.children);
-  }
+    function CreateElement(props) {
+        return React.createElement(type, props, props.children);
+    }
 
-  CreateElement.displayName = name;
+    CreateElement.displayName = name;
 
-  CreateElement.propTypes = {
-    children: PropTypes.node
-  };
+    CreateElement.propTypes = {
+        children: PropTypes.node
+    };
 
-  CreateElement.defaultProps = {
-    children: undefined
-  };
+    CreateElement.defaultProps = {
+        children: undefined
+    };
 
-  return CreateElement;
+    return CreateElement;
 }
 
-const Svg = module.exports = createElement('Svg', 'svg');
+var Circle = createElement('Circle', 'circle');
+var ClipPath = createElement('ClipPath', 'cipPath');
+var Defs = createElement('Defs', 'defs');
+var Ellipse = createElement('Ellipse', 'ellipse');
+var G = createElement('G', 'g');
+var Image = createElement('Image', 'image');
+var Line = createElement('Line', 'line');
+var LinearGradient = createElement('LinearGradient', 'linearGradient');
+var Path = createElement('Path', 'path');
+var Polygon = createElement('Polygon', 'polygon');
+var Polyline = createElement('Polyline', 'polyline');
+var RadialGradient = createElement('RadialGradient', 'radialGradient');
+var Rect = createElement('Rect', 'rect');
+var Stop = createElement('Stop', 'stop');
+var Svg = createElement('Svg', 'svg');
+var _Symbol = createElement('Symbol', 'symbol');
+var TSpan = createElement('TSpan', 'tspan');
+var Text = createElement('Text', 'text');
+var TextPath = createElement('TextPath', 'textPath');
+var Use = createElement('Use', 'use');
 
-Svg.Circle = createElement('Circle', 'circle');
-Svg.ClipPath = createElement('ClipPath', 'clipPath');
-Svg.Defs = createElement('Defs', 'defs');
-Svg.Ellipse = createElement('Ellipse', 'ellipse');
-Svg.G = createElement('G', 'g');
-Svg.Image = createElement('Image', 'image');
-Svg.Line = createElement('Line', 'line');
-Svg.LinearGradient = createElement('LinearGradient', 'linearGradient');
-Svg.Path = createElement('Path', 'path');
-Svg.Polygon = createElement('Polygon', 'polygon');
-Svg.Polyline = createElement('Polyline', 'polyline');
-Svg.RadialGradient = createElement('RadialGradient', 'radialGradient');
-Svg.Rect = createElement('Rect', 'rect');
-Svg.Stop = createElement('Stop', 'stop');
-Svg.Svg = createElement('Svg', 'svg');
-Svg.Symbol = createElement('Symbol', 'symbol');
-Svg.Text = createElement('Text', 'text');
-Svg.TextPath = createElement('TextPath', 'textPath');
-Svg.TSpan = createElement('TSpan', 'tspan');
-Svg.Use = createElement('Use', 'use');
+exports.Circle = Circle;
+exports.ClipPath = ClipPath;
+exports.Defs = Defs;
+exports.Ellipse = Ellipse;
+exports.G = G;
+exports.Image = Image;
+exports.Line = Line;
+exports.LinearGradient = LinearGradient;
+exports.Path = Path;
+exports.Polygon = Polygon;
+exports.Polyline = Polyline;
+exports.RadialGradient = RadialGradient;
+exports.Rect = Rect;
+exports.Stop = Stop;
+exports.Svg = Svg;
+exports.Symbol = _Symbol;
+exports.TSpan = TSpan;
+exports.Text = Text;
+exports.TextPath = TextPath;
+exports.Use = Use;
+exports.default = Svg;
