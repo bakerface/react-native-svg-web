@@ -25,6 +25,7 @@ import PropTypes from "prop-types";
 
 function createElement(name, type) {
   function CreateElement(props) {
+    // this enables the use of StyleSheet.create(...) in the web, like react-native-svg does
     return RNcreateElement(type, props, props.children);
   }
 
