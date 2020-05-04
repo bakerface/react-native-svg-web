@@ -19,30 +19,13 @@
   "bugs": {
     "url": "https://github.com/bakerface/react-native-svg-web/issues"
   },
-  "scripts": {
-    "test": "xo"
-  },
-  "xo": {
-    "space": true,
-    "env": [
-      "browser"
-    ],
-    "rules": {
-      "object-curly-spacing": [
-        "error",
-        "always"
-      ]
-    }
-  },
   "peerDependencies": {
-    "react": ">=15.4.0",
+    "prop-types": "*",
+    "react": "*",
     "react-native-web": "*"
   },
-  "dependencies": {
-    "prop-types": "^15.5.10"
-  },
   "devDependencies": {
-    "react": "^15.5.4",
-    "xo": "^0.18.2"
+    "prop-types": "^15.7.2",
+    "react": "^15.6.2"
   }
 }

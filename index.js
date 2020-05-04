@@ -20,13 +20,13 @@
  * SOFTWARE.
  *
  */
-import { createElement as RNcreateElement } from "react-native-web";
+import { createElement as createReactElement } from "react";
 import PropTypes from "prop-types";
 
 function createElement(name, type) {
   function CreateElement(props) {
     // this enables the use of StyleSheet.create(...) in the web, like react-native-svg does
-    return RNcreateElement(type, props, props.children);
+    return createReactElement(type, props, props.children);
   }
 
   CreateElement.displayName = name;
