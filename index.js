@@ -31,11 +31,11 @@ function createElement(name, type) {
   CreateElement.displayName = name;
 
   CreateElement.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   CreateElement.defaultProps = {
-    children: undefined
+    children: undefined,
   };
 
   return CreateElement;
@@ -57,6 +57,9 @@ Svg.Defs = Defs;
 export const Ellipse = createElement("Ellipse", "ellipse");
 Svg.Ellipse = Ellipse;
 
+export const ForeignObject = createElement("ForeignObject", "foreignObject");
+Svg.ForeignObject = ForeignObject;
+
 export const G = createElement("G", "g");
 Svg.G = G;
 
@@ -69,7 +72,16 @@ Svg.Line = Line;
 export const LinearGradient = createElement("LinearGradient", "linearGradient");
 Svg.LinearGradient = LinearGradient;
 
+export const Marker = createElement("Marker", "marker");
+Svg.Marker = Marker;
+
+export const Mask = createElement("Mask", "mask");
+Svg.Mask = Mask;
+
 export const Path = createElement("Path", "path");
+Svg.Path = Path;
+
+export const Path = createElement("Pattern", "pattern");
 Svg.Path = Path;
 
 export const Polygon = createElement("Polygon", "polygon");
@@ -86,6 +98,9 @@ Svg.Rect = Rect;
 
 export const Stop = createElement("Stop", "stop");
 Svg.Stop = Stop;
+
+export const Svg = createElement("Svg", "svg");
+Svg.Svg = Svg;
 
 export const Symbol = createElement("Symbol", "symbol");
 Svg.Symbol = Symbol;
