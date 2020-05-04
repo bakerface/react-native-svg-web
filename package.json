@@ -1,6 +1,6 @@
 {
   "name": "react-native-svg-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A web replacement for react-native-svg",
   "main": "index.js",
   "author": "Chris Baker <mail.chris.baker@gmail.com>",
