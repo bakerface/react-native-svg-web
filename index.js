@@ -20,53 +20,100 @@
  * SOFTWARE.
  *
  */
-
-'use strict';
-
-const React = require('react');
-const PropTypes = require('prop-types');
+import { createElement as RNcreateElement } from "react-native-web";
+import PropTypes from "prop-types";
 
 function createElement(name, type) {
   function CreateElement(props) {
-    return React.createElement(type, props, props.children);
+    // this enables the use of StyleSheet.create(...) in the web, like react-native-svg does
+    return RNcreateElement(type, props, props.children);
   }
 
   CreateElement.displayName = name;
 
   CreateElement.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   CreateElement.defaultProps = {
-    children: undefined
+    children: undefined,
   };
 
   return CreateElement;
 }
 
-const Svg = module.exports = createElement('Svg', 'svg');
+const Svg = createElement("Svg", "svg");
+export default Svg;
+Svg.Svg = Svg; // stay consistent with the old require based api
 
-Svg.Circle = createElement('Circle', 'circle');
-Svg.ClipPath = createElement('ClipPath', 'clipPath');
-Svg.Defs = createElement('Defs', 'defs');
-Svg.Ellipse = createElement('Ellipse', 'ellipse');
-Svg.ForeignObject = createElement('ForeignObject', 'foreignObject');
-Svg.G = createElement('G', 'g');
-Svg.Image = createElement('Image', 'image');
-Svg.Line = createElement('Line', 'line');
-Svg.LinearGradient = createElement('LinearGradient', 'linearGradient');
-Svg.Marker = createElement('Marker', 'marker');
-Svg.Mask = createElement('Mask', 'mask');
-Svg.Path = createElement('Path', 'path');
-Svg.Path = createElement('Pattern', 'pattern');
-Svg.Polygon = createElement('Polygon', 'polygon');
-Svg.Polyline = createElement('Polyline', 'polyline');
-Svg.RadialGradient = createElement('RadialGradient', 'radialGradient');
-Svg.Rect = createElement('Rect', 'rect');
-Svg.Stop = createElement('Stop', 'stop');
-Svg.Svg = createElement('Svg', 'svg');
-Svg.Symbol = createElement('Symbol', 'symbol');
-Svg.Text = createElement('Text', 'text');
-Svg.TextPath = createElement('TextPath', 'textPath');
-Svg.TSpan = createElement('TSpan', 'tspan');
-Svg.Use = createElement('Use', 'use');
+export const Circle = createElement("Circle", "circle");
+Svg.Circle = Circle;
+
+export const ClipPath = createElement("ClipPath", "clipPath");
+Svg.ClipPath = ClipPath;
+
+export const Defs = createElement("Defs", "defs");
+Svg.Defs = Defs;
+
+export const Ellipse = createElement("Ellipse", "ellipse");
+Svg.Ellipse = Ellipse;
+
+export const ForeignObject = createElement("ForeignObject", "foreignObject");
+Svg.ForeignObject = ForeignObject;
+
+export const G = createElement("G", "g");
+Svg.G = G;
+
+export const Image = createElement("Image", "image");
+Svg.Image = Image;
+
+export const Line = createElement("Line", "line");
+Svg.Line = Line;
+
+export const LinearGradient = createElement("LinearGradient", "linearGradient");
+Svg.LinearGradient = LinearGradient;
+
+export const Marker = createElement("Marker", "marker");
+Svg.Marker = Marker;
+
+export const Mask = createElement("Mask", "mask");
+Svg.Mask = Mask;
+
+export const Path = createElement("Path", "path");
+Svg.Path = Path;
+
+export const Pattern = createElement("Pattern", "pattern");
+Svg.Pattern = Pattern;
+
+export const Polygon = createElement("Polygon", "polygon");
+Svg.Polygon = Polygon;
+
+export const Polyline = createElement("Polyline", "polyline");
+Svg.Polyline = Polyline;
+
+export const RadialGradient = createElement("RadialGradient", "radialGradient");
+Svg.RadialGradient = RadialGradient;
+
+export const Rect = createElement("Rect", "rect");
+Svg.Rect = Rect;
+
+export const Stop = createElement("Stop", "stop");
+Svg.Stop = Stop;
+
+export const Svg = createElement("Svg", "svg");
+Svg.Svg = Svg;
+
+export const Symbol = createElement("Symbol", "symbol");
+Svg.Symbol = Symbol;
+
+export const Text = createElement("Text", "text");
+Svg.Text = Text;
+
+export const TextPath = createElement("TextPath", "textPath");
+Svg.TextPath = TextPath;
+
+export const TSpan = createElement("TSpan", "tspan");
+Svg.TSpan = TSpan;
+
+export const Use = createElement("Use", "use");
+Svg.Use = Use;
