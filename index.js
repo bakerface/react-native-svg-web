@@ -43,7 +43,7 @@ function createElement(name, type) {
 }
 
 const Svg = createElement("Svg", "svg");
-export default Svg;
+export default createElement("Svg", "svg");
 
 export const Circle = createElement("Circle", "circle");
 Svg.Circle = Circle;
@@ -99,7 +99,7 @@ Svg.Rect = Rect;
 export const Stop = createElement("Stop", "stop");
 Svg.Stop = Stop;
 
-export const Svg = createElement("Svg", "svg");
+export Svg;
 Svg.Svg = Svg;
 
 export const Symbol = createElement("Symbol", "symbol");
