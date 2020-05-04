@@ -82,8 +82,8 @@ Svg.Mask = Mask;
 export const Path = createElement("Path", "path");
 Svg.Path = Path;
 
-export const Path = createElement("Pattern", "pattern");
-Svg.Path = Path;
+export const Pattern = createElement("Pattern", "pattern");
+Svg.Pattern = Pattern;
 
 export const Polygon = createElement("Polygon", "polygon");
 Svg.Polygon = Polygon;
