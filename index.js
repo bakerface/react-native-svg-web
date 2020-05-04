@@ -44,7 +44,6 @@ function createElement(name, type) {
 
 const Svg = createElement("Svg", "svg");
 export default Svg;
-Svg.Svg = Svg; // stay consistent with the old require based api
 
 export const Circle = createElement("Circle", "circle");
 Svg.Circle = Circle;
