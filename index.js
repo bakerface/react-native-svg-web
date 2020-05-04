@@ -42,7 +42,8 @@ function createElement(name, type) {
   return CreateElement;
 }
 
-const Svg = createElement("Svg", "svg");
+export const Svg = createElement("Svg", "svg");
+
 export default Svg;
 Svg.Svg = Svg; // stay consistent with the old require based api
 
@@ -99,9 +100,6 @@ Svg.Rect = Rect;
 
 export const Stop = createElement("Stop", "stop");
 Svg.Stop = Stop;
-
-export const Svg = createElement("Svg", "svg");
-Svg.Svg = Svg;
 
 export const Symbol = createElement("Symbol", "symbol");
 Svg.Symbol = Symbol;
