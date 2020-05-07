@@ -22,7 +22,7 @@
   "peerDependencies": {
     "prop-types": "*",
     "react": "*",
-    "react-native-web": "*"
+    "react-native-web": "^0.12.2"
   },
   "devDependencies": {
     "prop-types": "^15.7.2",

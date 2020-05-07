@@ -20,7 +20,7 @@
  * SOFTWARE.
  *
  */
-import { createElement as createReactElement } from "react";
+import { unstable_createElement as createReactElement } from "react";
 import PropTypes from "prop-types";
 
 function createElement(name, type) {
