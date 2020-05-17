@@ -20,12 +20,14 @@
  * SOFTWARE.
  *
  */
-import { unstable_createElement as createReactElement } from "react-native-web";
+import * as React from "react";
+import * as ReactNativeWeb from "react-native-web";
 import PropTypes from "prop-types";
+
+const createReactElement = ReactNativeWeb.unstable_createElement || React.createElement;
 
 function createElement(name, type) {
   function CreateElement(props) {
-    // this enables the use of StyleSheet.create(...) in the web, like react-native-svg does
     return createReactElement(type, props, props.children);
   }
 
