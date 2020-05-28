@@ -27,21 +27,18 @@ import PropTypes from "prop-types";
 const createReactElement = ReactNativeWeb.unstable_createElement || React.createElement;
 
 function createElement(name, type) {
-  function CreateElement(props) {
-    return createReactElement(type, props, props.children);
+  return class CreateElement extends React.Component {
+    static displayName = name;
+    static propTypes = {
+      children: PropTypes.node,
+    };
+    static defaultProps = {
+      children: undefined,
+    };
+    render() {
+      return createReactElement(type, this.props, this.props.children);
+    }
   }
-
-  CreateElement.displayName = name;
-
-  CreateElement.propTypes = {
-    children: PropTypes.node,
-  };
-
-  CreateElement.defaultProps = {
-    children: undefined,
-  };
-
-  return CreateElement;
 }
 
 export const Svg = createElement("Svg", "svg");
