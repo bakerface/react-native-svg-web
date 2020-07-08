@@ -120,3 +120,23 @@ Svg.TSpan = TSpan;
 
 export const Use = createElement("Use", "use");
 Svg.Use = Use;
+
+export class SvgXml extends React.Component {
+  render() {
+    const divProps = Object.assign({}, this.props, {
+      dangerouslySetInnerHTML: { __html: this.props.xml},
+      style: {
+        height: this.props.height ? this.props.height + "px" : undefined,
+        width: this.props.width ? this.props.width + "px" : undefined,
+      }
+    })
+    return createReactElement("div", divProps, this.props.children);
+  }
+}
+SvgXml.propTypes = {
+  children: PropTypes.node,
+};
+SvgXml.defaultProps = {
+  children: undefined,
+};
+Svg.SvgXml = SvgXml;
