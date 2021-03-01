@@ -24,6 +24,11 @@
     "react": "*",
     "react-native-web": ">= 0.10.1"
   },
+  "peerDependenciesMeta": {
+    "prop-types": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
